@@ -34,10 +34,10 @@ class ZHDynamicCollectionView: UICollectionView {
     func dequeueReusableOffScreenCellWithReuseIdentifier(identifier: String) -> UICollectionViewCell? {
         var cell: UICollectionViewCell? = offscreenCells[identifier]
         if cell == nil {
-            if registeredCellNibs.has(identifier) {
+            if registeredCellNibs.indexForKey(identifier) != nil {
                 let cellNib: UINib = registeredCellNibs[identifier]! as UINib
                 cell = cellNib.instantiateWithOwner(nil, options: nil)[0] as? UICollectionViewCell
-            } else if registeredCellClasses.has(identifier) {
+            } else if registeredCellClasses.indexForKey(identifier) != nil {
                 let cellClass = registeredCellClasses[identifier] as UICollectionViewCell.Type!
                 cell = cellClass()
             } else {
