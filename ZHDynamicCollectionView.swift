@@ -43,6 +43,7 @@ class ZHDynamicCollectionView: UICollectionView {
             } else {
                 assertionFailure("\(identifier) is not registered in \(self)")
             }
+            offscreenCells[identifier] = cell
         }
         return cell
     }
