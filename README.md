@@ -1,6 +1,9 @@
 #ZHDynamicCollectionView
 
 ## Why
+
+Extremely useful for dynamic collectionView cell size, see this project [Dynamic-Collection-View-Cell-With-Auto-Layout-Demo](https://github.com/honghaoz/Dynamic-Collection-View-Cell-With-Auto-Layout-Demo)
+
 For dynamic collection view cell, in sizeForItemAtIndexPath, we need to 
 initialize an off screen cell and use it to calculate cell's size.
 
